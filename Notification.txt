@@ -1,0 +1,22 @@
+To: ${opened_by}
+
+Subject: Your recipe has been received and will be reviewed.
+
+Hi ${current.variables.requested_for},
+
+Your recipe has been received and is being reviewed. You will be notified by email.
+
+Name:  ${ current.variables.requested_for}
+Email:  ${current.variables.email}
+Recipe name : ${current.variables.recipe_name}
+Short_description: ${current.variables.short_description}
+Ingredients: ${current.variables.ingredients}
+Directions: ${current.variables.directions}
+Category:  ${current.variables.category}
+Type: ${current.variables.type}
+Time : ${current.variables.total_time}
+Nutrition: ${current.variables.nutrition}
+
+thank you.
+
+Note: This is an auto-generated response.  Please do not reply.
