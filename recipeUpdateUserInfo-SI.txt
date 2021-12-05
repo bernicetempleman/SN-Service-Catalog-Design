@@ -1,0 +1,125 @@
+var recipeUpdateUserInfo = Class.create();
+recipeUpdateUserInfo.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    demoTestFunction: function() {
+        var userId = this.getParameter('sysparm_user');
+        var gr = new GlideRecord('sys_user');
+        gr.addQuery('sys_id', userId);
+        gr.query();
+        if (gr.next()) {
+            var info = gr.email;
+            return info;
+        }
+    },
+
+    demoTestFunction2: function() {
+        //number of published recipes
+        var userId = this.getParameter('sysparm_user');
+        var gr = new GlideRecord('u_recipe');
+        gr.addQuery('u_user_name', userId);
+        var i = 0;
+        gr.query();
+        while (gr.next()) {
+            i++;
+        }
+        return i;
+    },
+
+    demoTestFunction3: function() {
+
+        var count1 = 0;
+        var sd = this.getParameter('sysparm_sd');
+
+        var gr = new GlideRecord('u_recipe');
+        gr.addQuery('u_short_description', sd);
+        gr.query();
+
+        while (gr.next()) {
+            count1++;
+        }
+        if (count1 > 0) {
+            gs.addErrorMessage("The total number of Recipes with same Short Description is: " + count1);
+        }
+        return count1;
+    },
+
+    demoTestFunction4: function() {
+
+        var count2 = 0;
+        var rn = this.getParameter('sysparm_rn');
+
+        var gr = new GlideRecord('u_recipe');
+        gr.addQuery('u_recipe_name', rn);
+        gr.query();
+
+        while (gr.next()) {
+            count2++;
+        }
+        if (count2 > 0) {
+            gs.addErrorMessage("The total number of Recipes with same Name is: " + count2);
+        }
+        return count2;
+    },
+
+    demoTestFunction5: function() {
+        var rn = this.getParameter('sysparm_rn');
+        var len = rn.length();
+        if (len > 40) {
+            gs.addErrorMessage('Please enter a recipe name under 40 characters.');
+        }
+        return len;
+    },
+    demoTestFunction6: function() {
+        var sd = this.getParameter('sysparm_sd');
+        var len = sd.length();
+        if (len > 80) {
+            gs.addErrorMessage('Please enter a short description under 80 characters.');
+        }
+        return len;
+    },
+    demoTestFunction7: function() {
+        var directions = this.getParameter('sysparm_directions');
+        var len = directions.length();
+        if (len > 400) {
+            gs.addErrorMessage('Please enter directions under 400 characters.');
+        }
+        return len;
+    },
+    demoTestFunction8: function() {
+        var ingredients = this.getParameter('sysparm_ingredients');
+        var len = ingredients.length();
+        if (len > 400) {
+            gs.addErrorMessage('Please enter ingredients under 400 characters.');
+        }
+        return len;
+    },
+    demoTestFunction9: function() {
+        var nutrition = this.getParameter('sysparm_nutrition');
+        var len = nutrition.length();
+        if (len > 400) {
+            gs.addErrorMessage('Please enter nutrition under 400 characters.');
+        }
+        return len;
+    },
+    demoTestFunction10: function() {
+        var nutrition = this.getParameter('sysparm_time');
+        var len = nutrition.length();
+        if (len > 40) {
+            gs.addErrorMessage('Please enter time under 40 characters.');
+        }
+        return len;
+    },
+    demoTestFunction11: function() {
+        var userId = this.getParameter('sysparm_user');
+        var gr = new GlideRecord('sys_user');
+        gr.addQuery('sys_id', userId);
+        gr.query();
+        if (gr.next()) {
+            var info = gr.phone;
+            return phone;
+        }
+    },
+
+
+    type: 'recipeUpdateUserInfo'
+});
