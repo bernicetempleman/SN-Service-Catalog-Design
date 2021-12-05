@@ -52,6 +52,9 @@ Catalog Client Scripts
 
 (Create workflows for the recipe submission process)![image](https://user-images.githubusercontent.com/12488769/144731125-bbdc2ecd-c6e3-4380-bf26-c5605daa9153.png)
 
+Script Include (Server Side)
+![image](https://user-images.githubusercontent.com/12488769/144731354-6894e0b8-11df-42fd-967e-30db5cbcf678.png)
+
 (Create a script to insert a new record after approval)
 ![image](https://user-images.githubusercontent.com/12488769/144731176-cd9ef73b-80a6-4b03-8cb1-2884992a5221.png)
 
