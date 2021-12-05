@@ -1,6 +1,13 @@
 # Service-Catalog-Design
 Service Request Management system provides an intuitive interface with predefined work flows for IT requests to be reliably submitted, routed, approved, monitored and delivered with minimum human interference. Every individuals developed complex Service Catalog using Custom Table, including Catalog Clients scripts/Catalog UI policies, and complex Workflows.
 
+- Composite service request
+- Minimum one custom table
+- Minimum four tasks created by workflow
+- Notifications
+- Form design should have between 10 and 15 variables at minimum
+- Set different stages / set different state of the RITM
+
 ## Technologies Used
 - ServiceNow
 - IT Service Management
@@ -10,22 +17,24 @@ Service Request Management system provides an intuitive interface with predefine
 ## Features
 
 List of features ready and TODOs for future development
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Submit a recipe to be published
+- Notifications, approvals, and tasks sent to employees, groups, managers and submitter concerning status and tasks
+- Once approved, the recipe is entered into the database to be published
 
 To-do list:
-- Wow improvement to be done 1
-- Wow improvement to be done 2
+- Add access to view recipes in portal
+- Create a seperate table for recipe users
 
 ## Getting Started
-(include git clone command) (include all environment setup steps)
+(Create a recipe table and populate with data)
 
-> Be sure to include BOTH Windows and Unix command
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+(Create Recipe approval group and users belonging to group)
 
-- All the code required to get started
-- Images of what it should look like
+(Create a catalog form to submit a new recipe)
+
+(Create workflows for the recipe submission process)
+
+(Create a script to insert a new record after approval)
 
 ## Usage
 > Here, you instruct other people on how to use your project after they’ve installed it. 
