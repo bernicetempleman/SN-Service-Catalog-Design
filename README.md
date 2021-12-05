@@ -26,13 +26,13 @@ To-do list:
 - Create a seperate table for recipe users
 
 ## Getting Started
-(Create a recipe table and populate with data)
+Create a recipe table and populate with data
 ![image](https://user-images.githubusercontent.com/12488769/144730651-b2b83062-d5ee-4942-8133-4e27426c6762.png)
 
-(Create Recipe approval group and users belonging to group)
+Create Recipe approval group and users belonging to group
 ![image](https://user-images.githubusercontent.com/12488769/144730673-f345b54a-bc16-4308-8c3c-976e20fe7bee.png)
 
-(Create a catalog form to submit a new recipe)
+Create a catalog form to submit a new recipe
 ![image](https://user-images.githubusercontent.com/12488769/144730777-d66e73ba-b467-40df-9a04-ca572b414f56.png)
 
 ![image](https://user-images.githubusercontent.com/12488769/144730807-2eacf2ad-ecd3-43b0-a257-83a324a11e15.png)
@@ -50,15 +50,20 @@ To-do list:
 Catalog Client Scripts
 ![image](https://user-images.githubusercontent.com/12488769/144731038-a8ccfb14-e42d-4b1c-8177-a1eee74df225.png)
 
-(Create workflows for the recipe submission process)![image](https://user-images.githubusercontent.com/12488769/144731125-bbdc2ecd-c6e3-4380-bf26-c5605daa9153.png)
+Create workflows for the recipe submission process
+![image](https://user-images.githubusercontent.com/12488769/144731125-bbdc2ecd-c6e3-4380-bf26-c5605daa9153.png)
 
 Set Values
 ![image](https://user-images.githubusercontent.com/12488769/144732565-e5249316-3170-4b7b-b96b-201c7dbff417.png)
 
+![image](https://user-images.githubusercontent.com/12488769/144732703-55a7c4d8-0314-425c-ae77-56c38648fcb0.png)
+
+![image](https://user-images.githubusercontent.com/12488769/144732760-bb50db99-2b6e-44e4-89c8-8885ac93d68d.png)
+
 Script Include (Server Side)
 ![image](https://user-images.githubusercontent.com/12488769/144731354-6894e0b8-11df-42fd-967e-30db5cbcf678.png)
 
-(Create a script to insert a new record after approval)
+Create a script to insert a new record after approval
 ![image](https://user-images.githubusercontent.com/12488769/144731176-cd9ef73b-80a6-4b03-8cb1-2884992a5221.png)
 
 ![image](https://user-images.githubusercontent.com/12488769/144731202-32fd19fc-2d19-42b2-ad21-a394f5ff9e8f.png)
