@@ -52,6 +52,9 @@ Catalog Client Scripts
 
 (Create workflows for the recipe submission process)![image](https://user-images.githubusercontent.com/12488769/144731125-bbdc2ecd-c6e3-4380-bf26-c5605daa9153.png)
 
+Set Values
+![image](https://user-images.githubusercontent.com/12488769/144732565-e5249316-3170-4b7b-b96b-201c7dbff417.png)
+
 Script Include (Server Side)
 ![image](https://user-images.githubusercontent.com/12488769/144731354-6894e0b8-11df-42fd-967e-30db5cbcf678.png)
 
