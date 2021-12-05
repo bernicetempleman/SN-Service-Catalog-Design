@@ -1,0 +1,15 @@
+var recipe = new GlideRecord('u_recipe');
+recipe.initialize();
+recipe.u_recipe_name = current.variables.recipe_name;
+recipe.u_user_name = current.variables.requested_for;
+
+recipe.u_email = current.variables.email;
+recipe.u_short_description = current.variables.short_description;
+recipe.u_ingredients = current.variables.ingredients;
+recipe.u_directions = current.variables.directions;
+recipe.u_category = current.variables.category;
+recipe.u_type = current.variables.type;
+recipe.u_total_time = current.variables.total_time;
+recipe.u_image = current.variables.image;
+recipe.u_nutrition = current.variables.nutrition;
+recipe.insert();
