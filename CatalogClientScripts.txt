@@ -1,0 +1,257 @@
+
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+	var test = g_form.getValue('requested_for');
+	//var test = g_form.getValue('caller_id');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+    ga.addParam('sysparm_name', 'demoTestFunction2'); //Call the Function
+    ga.addParam('sysparm_user', test); //Pass the Parameter Value
+   
+    ga.getXML(getResponse); //Callback function
+
+	function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); 
+		//Store the response coming from the script include.
+		g_form.setValue('published_recipes', answer);
+        //alert(answer);
+    }
+   
+}
+
+//maxlen_time
+
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Check length on server side per requirement
+
+    var test = g_form.getValue('total_time');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction10'); //Call the Function
+    ga.addParam('sysparm_time', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (answer > 40) {
+            g_form.setValue('total_time', '');
+            // if required make the filed to clear the value
+            //alert('Please enter maximum of 40');
+        }
+    }
+   
+}
+
+//maxlen_recipe_name
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+	
+	//Check length on server side per requirement
+
+    var test = g_form.getValue('recipe_name');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction5'); //Call the Function
+    ga.addParam('sysparm_rn', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (answer > 40) {
+            g_form.setValue('recipe_name', '');
+            // if required make the filed to clear the value
+            //alert('Please enter maximum of 40');
+        }
+    }
+
+}
+
+//maxlen_nutrition
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+//check length server side
+    //Type appropriate comment here, and begin script below
+    var test = g_form.getValue('nutrition');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction9'); //Call the Function
+    ga.addParam('sysparm_nutrition', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var len = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (len > 400){
+			g_form.setValue('nutrition', '');
+            //alert('Please enter maximum of 400');
+		}
+    }
+   
+}
+
+//maxlen_ingredients
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+	//server side
+    //check length server side
+    //Type appropriate comment here, and begin script below
+    var test = g_form.getValue('ingredients');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction8'); //Call the Function
+    ga.addParam('sysparm_ingredients', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var len = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (len > 400) {
+            g_form.setValue('ingredients', '');
+            //alert('Please enter maximum of 400');
+        }
+    }   
+}
+
+//directions
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+    //server side
+    //check length server side
+    //Type appropriate comment here, and begin script below
+    var test = g_form.getValue('directions');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction7'); //Call the Function
+    ga.addParam('sysparm_directions', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var len = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (len > 400) {
+            g_form.setValue('directions', '');
+            //alert('Please enter maximum of 400');
+        }
+    }
+}
+
+//recipe_check_rn
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+	var test = g_form.getValue('recipe_name');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+	
+    ga.addParam('sysparm_name', 'demoTestFunction4'); //Call the Function
+    ga.addParam('sysparm_rn', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+       // alert("The total number of Recipes with the same Recipe Name is: " + answer);
+		if (answer > 0) {
+            g_form.setValue('recipe_name', '');
+		}
+    }
+}
+
+//maxlen_short_desc
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+
+    //check length server side
+    //Type appropriate comment here, and begin script below
+    var test = g_form.getValue('short_description');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+
+    ga.addParam('sysparm_name', 'demoTestFunction6'); //Call the Function
+    ga.addParam('sysparm_sd', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var len = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        if (len > 80) {
+            g_form.setValue('short_description', '');
+            //alert('Please enter maximum of 80');
+        }
+    }
+}
+
+//recipe_check_sd
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+	var test = g_form.getValue('short_description');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+	
+    ga.addParam('sysparm_name', 'demoTestFunction3'); //Call the Function
+    ga.addParam('sysparm_sd', test); //Pass the Parameter Value
+
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); //Store the respone coming from the script include.
+        //alert("The total number of Recipes with same Short Description is: " + answer);
+		if (answer > 0) {
+            g_form.setValue('short_description', '');
+		}
+    }
+   
+}
+
+function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+	
+   //var test = g_form.getReference('requested_for');
+	//g_form.setValue('email', test.email);
+	
+	var test = g_form.getValue('requested_for');
+	//var test = g_form.getValue('caller_id');
+    var ga = new GlideAjax('recipeUpdateUserInfo'); //Call Script Include
+    ga.addParam('sysparm_name', 'demoTestFunction'); //Call the Function
+    ga.addParam('sysparm_user', test); //Pass the Parameter Value
+   
+    ga.getXML(getResponse); //Callback function
+
+    function getResponse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer"); 
+		//Store the response coming from the script include.
+		g_form.setValue('email', answer);
+        //alert(answer);
+    }
+	
